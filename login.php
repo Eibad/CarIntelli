@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -191,25 +194,27 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-lg-6 col-md-12">
-                    <div class="gray-form clearfix">
-                        <div class="form-group">
-                            <label for="name">User name* </label>
-                            <input id="name" class="form-control" type="text" placeholder="User name" name="web">
-                        </div>
-                        <div class="form-group">
-                            <label for="Password">Password* </label>
-
-                            <input id="Password" class="form-control" type="password" placeholder="Password" name="Password">
-                        </div>
-                        <div class="form-group">
-                            <div class="remember-checkbox mb-4">
-                                <input type="checkbox" name="one" id="one">
-                                <label for="one"> Remember me</label>
-                                <a href="#" class="float-right">Forgot Password?</a>
+                    <form action="submit_login.php" method="Post">
+                        <div class="gray-form clearfix">
+                            <div class="form-group">
+                                <label for="name">Email </label>
+                                <input id="name" class="form-control" type="text" placeholder="Email" name="email">
                             </div>
+                            <div class="form-group">
+                                <label for="Password">Password* </label>
+
+                                <input id="Password" class="form-control" type="password" placeholder="Password" name="password">
+                            </div>
+                            <div class="form-group">
+                                <div class="remember-checkbox mb-4">
+                                    <input type="checkbox" name="one" id="one">
+                                    <label for="one"> Remember me</label>
+                                    <a href="#" class="float-right">Forgot Password?</a>
+                                </div>
+                            </div>
+                            <button  class="button red" name="submit"> Log in </button>
                         </div>
-                        <a href="#" class="button red"> Log in </a>
-                    </div>
+                    </form>    
                 </div>
             </div>
         </div>
