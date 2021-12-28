@@ -25,7 +25,7 @@ if(isset($_REQUEST['submit']))
         $_SESSION['email'] = $row['email'];
 
 
-        header("location:index-3.html");
+        header("location:index-3.php");
 
 
     }
