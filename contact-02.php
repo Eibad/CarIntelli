@@ -152,19 +152,19 @@
                                                 <!--grid column 3-->
                                                 <div class="grid-col-3">
                                                     <ul>
-                                                        <li><a href="about-01.html">About 01</a></li>
+                                                        <li><a href="about-01.php">About 01</a></li>
                                                         <li><a href="about-02.html">About 02</a></li>
-                                                        <li><a href="service-01.html">service 01</a></li>
+                                                        <li><a href="service-01.php">service 01</a></li>
                                                         <li><a href="service-02.html">service 02</a></li>
-                                                        <li><a href="career.html">career</a></li>
+                                                        <li><a href="career.php">career</a></li>
                                                     </ul>
                                                 </div>
                                                 <!--grid column 3-->
                                                 <div class="grid-col-3">
                                                     <ul>
                                                         <li><a href="team-01.html">team 01</a></li>
-                                                        <li><a href="team-02.html">team 02</a></li>
-                                                        <li><a href="contact-01.html">contact 01</a></li>
+                                                        <li><a href="team-02.php">team 02</a></li>
+                                                        <li><a href="contact-01.php">contact 01</a></li>
                                                         <li><a href="contact-02.html">contact 02</a></li>
                                                         <li><a href="faq.html">faq</a></li>
                                                     </ul>
@@ -201,7 +201,7 @@
                                                 <ul class="drop-down-multilevel">
                                                     <li><a href="blog-left-sidebar.html">left sidebar</a></li>
                                                     <li><a href="blog-right-sidebar.html">right sidebar</a></li>
-                                                    <li><a href="blog-fullwidth.html">fullwidth</a></li>
+                                                    <li><a href="blog-fullwidth.php">fullwidth</a></li>
                                                 </ul>
                                             </li>
                                             <li><a href="javascript:void(0)">Masonry  <i class="fa fa-angle-right fa-indicator"></i> </a>
@@ -240,7 +240,7 @@
                                     <li class="active"><a href="javascript:void(0)"> Contact <i class="fa fa-angle-down fa-indicator"></i></a>
                                         <!-- drop down multilevel  -->
                                         <ul class="drop-down-multilevel right-menu">
-                                            <li><a href="contact-01.html">contact 01</a></li>
+                                            <li><a href="contact-01.php">contact 01</a></li>
                                             <li class="active"><a href="contact-02.html">contact 02</a></li>
                                         </ul>
                                     </li>
