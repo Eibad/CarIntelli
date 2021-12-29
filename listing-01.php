@@ -509,7 +509,7 @@ product-listing  -->
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-4">
+                            <!-- <div class="col-lg-4">
                                 <div class="price-slide-2">
                                     <div class="price">
                                         <label for="amount-2">Price Range</label>
@@ -517,7 +517,7 @@ product-listing  -->
                                         <div id="slider-range-2"></div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             <div class="col-lg-4">
                                 <div class="price-search">
                                     <span>Price search</span>
@@ -532,7 +532,7 @@ product-listing  -->
                             <div class="col-lg-5">
                                 <div class="change-view-button">
                                     <a class="active" href="#"> <i class="fa fa-th"></i> </a>
-                                    <a href="listing-02.html"> <i class="fa fa-list-ul"></i> </a>
+                                    <a href="listing-02.php"> <i class="fa fa-list-ul"></i> </a>
                                 </div>
                             </div>
                             <div class="col-lg-3 text-right">
