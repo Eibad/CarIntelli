@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿<?php
+session_start();
+?>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -95,7 +98,7 @@
                     <div class="col-lg-6 col-md-12">
                         <div class="topbar-left text-lg-left text-center">
                             <ul class="list-inline">
-                                <li> <i class="fa fa-envelope-o"> </i> support@website.com</li>
+                                <li> <i class="fa fa-envelope-o"> </i> support@carintelli.com</li>
                                 <li> <i class="fa fa-clock-o"></i> Mon - Sat 8.00 - 18.00. Sunday CLOSED</li>
                             </ul>
                         </div>
@@ -103,11 +106,11 @@
                     <div class="col-lg-6 col-md-12">
                         <div class="topbar-right text-lg-right text-center">
                             <ul class="list-inline">
-                                <li> <i class="fa fa-phone"></i> (007) 123 456 7890</li>
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                <li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
+                                <li> <i class="fa fa-phone"></i> +92 00 786 01</li>
+                                <li><a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="https://twitter.com/?lang=en"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="https://www.instagram.com/?hl=en"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="https://www.youtube.com/"><i class="fa fa-youtube-play"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -129,143 +132,58 @@
                                 <!-- menu logo -->
                                 <ul class="menu-logo">
                                     <li>
-                                        <a href="index-2.html"><img id="logo_dark_img" src="images/logo-dark.png"
-                                                alt="logo"> </a>
+                                        <a href="index-2.html"><img id="logo_img2" src="images/logo-light.png" alt="logo"> </a>
                                     </li>
                                 </ul>
                                 <!-- menu links -->
                                 <ul class="menu-links">
                                     <!-- active class -->
-                                    <li class="active"><a href="javascript:void(0)"> Home </a>
-                                        <!-- drop down multilevel  -->
-                                        <!-- <ul class="drop-down-multilevel">
-                                            <li><a href="index-2.html">Home 1</a></li>
-                                            <li><a href="index-2.html">Home 2</a></li>
-                                            <li class="active"><a href="index-3.html">Home 3</a></li>
-                                            <li><a href="index-4.html">Home 4</a></li>
-                                            <li><a href="index-5.html">Home 5</a></li>
-                                            <li><a href="index-6.html">Home 6</a></li>
-                                            <li><a href="index-7.html">Home 7</a></li>
-                                            <li><a href="index-8.html">Home 8</a></li>
-                                            <li><a href="index-9.html">Home 9</a></li>
-                                            <li><a href="index-10.html">Home 10</a></li>
-                                            <li><a href="index-car-service.html">Car service </a></li>
-                                            <li><a href="index-car-directory.html"> Car directory</a></li>
-                                            <li><a href="index-car-listing.html">Car listing </a></li>
-                                            <li><a href="index-landing-page.html">landing page</a></li>
-                                        </ul> -->
-                                    </li>
-                                    <li><a href="javascript:void(0)">Pages <i
-                                                class="fa fa-angle-down fa-indicator"></i></a>
-                                        <!-- drop down full width -->
-                                        <div class="drop-down menu-bg grid-col-12">
-                                            <!--grid row-->
-                                            <div class="grid-row">
-                                                <!--grid column 3-->
-                                                <div class="grid-col-3">
-                                                    <ul>
-                                                        <li><a href="about-01.php">About 01</a></li>
-                                                        <!-- <li><a href="about-02.html">About 02</a></li> -->
-                                                        <li><a href="service-01.php">service 01</a></li>
-                                                        <!-- <li><a href="service-02.html">service 02</a></li> -->
-                                                        <li><a href="career.php">career</a></li>
-                                                    </ul>
-                                                </div>
-                                                <!--grid column 3-->
-                                                <div class="grid-col-3">
-                                                    <ul>
-                                                        <li><a href="team-01.html">team 01</a></li>
-                                                        <!-- <li><a href="team-02.php">team 02</a></li> -->
-                                                        <!-- <li><a href="contact-01.php">contact 01</a></li> -->
-                                                        <!-- <li><a href="contact-02.html">contact 02</a></li> -->
-                                                        <li><a href="faq.html">faq</a></li>
-                                                    </ul>
-                                                </div>
-                                                <!--grid column 3-->
-                                                <div class="grid-col-3">
-                                                    <ul>
-                                                        <li><a href="login.html">login</a></li>
-                                                        <li><a href="register.html">register</a></li>
-                                                        <li><a href="error-404.html">error 404</a></li>
-                                                        <li><a href="coming-soon.html">coming soon</a></li>
-                                                        <!-- <li><a href="typography.html">typography</a></li> -->
-                                                    </ul>
-                                                </div>
-                                                <!--grid column 3-->
-                                                <div class="grid-col-3">
-                                                    <ul>
-                                                        <li><a href="page-left-sidebar.html">page left sidebar </a></li>
-                                                        <li><a href="page-right-sidebar.html">page right sidebar </a>
-                                                        </li>
-                                                        <li><a href="page-both-sidebar.html">page both sidebar </a></li>
-                                                        <li><a href="terms-and-conditions.html">terms and conditions
-                                                            </a></li>
-                                                        <li><a href="privacy-policy.html">privacy policy </a></li>
-                                                    </ul>
-                                                </div>
+                                    <li><a href="index-3.php"> Home </a>
 
-                                            </div>
-                                        </div>
                                     </li>
-                                    <li><a href="blog-fullwidth.php">blog</a>
-                                        <!-- drop down multilevel  -->
-                                        <!-- <ul class="drop-down-multilevel">
-                                            <li><a href="javascript:void(0)">blog classic <i class="fa fa-angle-right fa-indicator"></i> </a>
-                                                drop down second level
-                                                <ul class="drop-down-multilevel">
-                                                    <li><a href="blog-left-sidebar.html">left sidebar</a></li>
-                                                    <li><a href="blog-right-sidebar.html">right sidebar</a></li>
-                                                    <li><a href="blog-fullwidth.php">fullwidth</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="javascript:void(0)">Masonry  <i class="fa fa-angle-right fa-indicator"></i> </a> drop down second level
-                                                <ul class="drop-down-multilevel">
-                                                    <li><a href="blog-masonry-2-collums.html"> 2 column </a> </li>
-                                                    <li><a href="blog-masonry-3-collums.html"> 3 column </a> </li>
-                                                    <li><a href="blog-masonry-4-collums.html"> 4 column </a> </li>
-                                                    <li><a href="blog-masonry-left-sidebar.html">left sidebar</a></li>
-                                                    <li><a href="blog-masonry-right-sidebar.html">right sidebar</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="javascript:void(0)">blog single <i class="fa fa-angle-right fa-indicator"></i> </a> drop down second level
-                                                <ul class="drop-down-multilevel">
-                                                    <li><a href="blog-single-01.html">blog single 01 </a> </li>
-                                                    <li><a href="blog-single-02.html">blog single 02 </a> </li>
-                                                </ul>
-                                            </li>
-                                        </ul> -->
+                                    <li><a href="listing-01.php">Recommend Me a Car </a>
+                                        
                                     </li>
-                                    <li><a href="javascript:void(0)">Cars <i
-                                                class="fa fa-angle-down fa-indicator"></i></a>
+                                    <li><a href="blog-fullwidth.php">Blog </a></li>
+                                    <li><a href="contact-01.php">Contact </a>
+                                    </li>
+                                    <li><a href="javascript:void(0)"> More <i class="fa fa-angle-down fa-indicator"></i></a>
                                         <!-- drop down multilevel  -->
-                                        <ul class="drop-down-multilevel">
-                                            <li><a href="listing-01.php">Our Recommendations</a></li>
-                                            <!-- <li><a href="index-car-directory.php">Recommend Me a Car</a></li> -->
+                                        <ul class="drop-down-multilevel right-menu">
+                                            <li><a href="about-01.php">About</a></li>
+                                            <li><a href="service-01.php">Service</a></li>
+                                            <li><a href="career.php">Career</a></li>
+                                            <li><a href="team-02.php">Team</a></li>
                                         </ul>
                                     </li>
-                                    <!-- <li><a href="javascript:void(0)">Car details  <i class="fa fa-angle-down fa-indicator"></i></a>
-                                        drop down multilevel 
-                                        <ul class="drop-down-multilevel">
-                                            <li><a href="details-01.html">details 01</a></li>
-                                            <li><a href="details-02.html">details 02</a></li>
-                                        </ul>
-                                    </li> -->
-
-                                    <li><a href="contact-01.php"> Contact </a>
-                                        <!-- drop down multilevel  -->
-                                        <!-- <ul class="drop-down-multilevel right-menu"> -->
-                                        <!-- <li><a href="contact-01.php">contact 01</a></li> -->
-                                    
+                                    <li>
                                     </li>
-
+                                    <?php
+                                        if (isset($_SESSION['email'])){
+                                    ?>
                                     <li><a href="logout.php"> Logout </a>
-                                        <!-- drop down multilevel  -->
-                                        <!-- <ul class="drop-down-multilevel right-menu"> -->
-                                        <!-- <li><a href="contact-01.php">contact 01</a></li> -->
-                                    
                                     </li>
-                                    
-                                    <!-- <li><a href="contact-02.html">contact 02</a></li> -->
+                                    <?php
+                                        }
+                                        else{
+                                            ?>
+                                            <li><a href="login.php"> Login </a> 
+                                            <?php
+                                        }
+                                    ?>
+                                    <?php
+                                        if (isset($_SESSION['email'])){
+                                    ?>
+                                    <li><a href="logout.php"> Logout </a>
+                                    </li>
+                                    <?php
+                                        }
+                                        else{
+                                            ?>
+                                            <li><a href="login.php"> Login </a> 
+                                            <?php
+                                        }
+                                    ?>
                                 </ul>
 
                                 
@@ -327,14 +245,7 @@
                         ut aliquip ex ea commodo consequat. </div>
 
                     <!-- LAYER NR. 3 -->
-                    <div class="tp-caption button red " id="slide-3-layer-4" data-x="62" data-y="452"
-                        data-width="['auto']" data-height="['auto']" data-type="button" data-responsive_offset="on"
-                        data-frames='[{"delay":1720,"speed":2000,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"nothing"},{"frame":"hover","speed":"300","ease":"Linear.easeNone","force":true,"to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(0, 0, 0, 1.00);bg:rgba(255, 255, 255, 1.00);bs:solid;bw:0 0 0 0;"}]'
-                        data-textalign="['left','left','left','left']" data-paddingtop="[10,10,10,10]"
-                        data-paddingright="[30,30,30,30]" data-paddingbottom="[10,10,10,10]"
-                        data-paddingleft="[30,30,30,30]"
-                        style="z-index: 7; white-space: nowrap; font-size: 14px; line-height: 16px; font-weight: 400; font-family:Open Sans;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">
-                        Discover More </div>
+                    
                 </li>
                 <!-- SLIDE  -->
                 <li data-index="rs-4" data-transition="random-static,random-premium,random"
@@ -371,14 +282,14 @@
                     </div>
 
                     <!-- LAYER NR. 6 -->
-                    <div class="tp-caption button red " id="slide-4-layer-4" data-x="62" data-y="430"
+                    <!-- <div class="tp-caption button red " id="slide-4-layer-4" data-x="62" data-y="430"
                         data-width="['auto']" data-height="['auto']" data-type="button" data-responsive_offset="on"
                         data-frames='[{"delay":1720,"speed":2000,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"nothing"},{"frame":"hover","speed":"300","ease":"Linear.easeNone","force":true,"to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(0, 0, 0, 1.00);bg:rgba(255, 255, 255, 1.00);bs:solid;bw:0 0 0 0;"}]'
                         data-textalign="['left','left','left','left']" data-paddingtop="[10,10,10,10]"
                         data-paddingright="[30,30,30,30]" data-paddingbottom="[10,10,10,10]"
                         data-paddingleft="[30,30,30,30]"
                         style="z-index: 7; white-space: nowrap; font-size: 14px; line-height: 16px; font-weight: 400;font-family:Open Sans;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">
-                        Discover More </div>
+                        Discover More </div> -->
                 </li>
             </ul>
             <div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>
@@ -391,7 +302,9 @@
 
     <!--=================================
  search -->
-
+ <?php
+                                        if (isset($_SESSION['email'])){
+                                    ?>
     <section class="search white-bg">
         <div class="container">
             <div class="search-block">
@@ -476,7 +389,7 @@
                                 <input type="text" id="amount" class="amount" value="$50 - $300">
                                 <div id="slider-range"></div>
                                 <a class="button" href="#">Search the Vehicle</a>
-                                <a class="link" href="#">ADVANCED SEARCH</a>
+                                <!-- <a class="link" href="#">ADVANCED SEARCH</a> -->
                             </div>
                         </div>
                     </div>
@@ -484,6 +397,9 @@
             </div>
         </div>
     </section>
+    <?php
+                                        }
+    ?>
 
     <!--=================================
  search -->
@@ -494,7 +410,7 @@
 
     <section class="welcome-3 white-bg page-section-ptb">
         <div class="container">
-            <div class="row">
+            <!-- <div class="row">
                 <div class="col-md-4">
                     <div class="content-box-2 car-bg-1">
                         <i class="glyph-icon flaticon-beetle"></i>
@@ -522,7 +438,7 @@
                         <a class="link" href="#">read more <i class="fa fa-angle-double-right"></i> </a>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <div class="row about custom-block-2">
                 <div class="col-md-6">
                     <h2>About us </h2>
@@ -538,7 +454,7 @@
             </div>
             <div class="row">
                 <div class="col-md-3">
-                    <div class="feature-box-2 box-hover active">
+                    <div class="feature-box-2 box-hover">
                         <div class="icon">
                             <i class="glyph-icon flaticon-beetle"></i>
                         </div>
@@ -602,7 +518,7 @@
                 <div class="col-md-12">
                     <div class="section-title">
                         <span>Check out our recent cars</span>
-                        <h2>Feature Car </h2>
+                        <h2>Recent Cars </h2>
                         <div class="separator"></div>
                     </div>
                 </div>
@@ -611,134 +527,60 @@
                 <div class="col-md-12">
                     <div class="owl-carousel owl-theme" data-nav-dots="true" data-items="3" data-md-items="3"
                         data-sm-items="2" data-xs-items="1" data-space="15">
+                        <?php
+                        $con = mysqli_connect("localhost","root",'',"carintelli");
+
+                        // $query = "SELECT * FROM car_list WHERE car_status = '1' ORDER BY id DESC";
+                        
+                        $query = "SELECT * FROM car_list ORDER BY id DESC";
+                         $count =0;
+                         $result=mysqli_query($con,$query);
+         
+         
+                                while($row=mysqli_fetch_assoc($result)){
+                                $count++;
+                                $car_name = $row['car_name'];
+                                $car_price = $row['car_price'];
+                                $car_main_image = $row['main_image'];
+                                $car_condition = $row['car_condition'];
+                                $model = $row['model'];
+
+                        ?>
                         <div class="item">
                             <div class="car-item-2 text-center">
                                 <div class="car-image">
-                                    <img class="img-fluid" src="images/car/01.jpg" alt="">
+                                    <img class="img-fluid" src="<?php echo 'images/car/'.$car_main_image?>" alt="">
                                     <div class="car-overlay-banner">
-                                        <ul>
-                                            <li><a href="#"><i class="fa fa-link"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-dashboard"></i></a></li>
-                                        </ul>
+                                        
                                     </div>
                                 </div>
                                 <div class="car-content">
-                                    <a href="#">Acura Rsx</a>
+                                    <a href="#"><?php echo  $car_name?></a>
                                     <div class="car-list">
                                         <ul class="list-inline">
-                                            <li> 2017</li>
-                                            <li> Manual </li>
-                                            <li> 210 hp </li>
+                                            <li> <?php echo  $model?> </li>
+                                            <li> <?php echo  $car_condition?> </li>
+                                            <li> 3000 CC </li>
                                             <li> 6,000 mi</li>
                                         </ul>
                                     </div>
-                                    <div class="info">
+                                    <!-- <div class="info">
                                         <p>You will begin to realize why this exercise Pattern is called the Dickens
                                             with to ghost.</p>
-                                    </div>
+                                    </div> -->
                                     <div class="price">
-                                        <span class="old-price">$29,568</span>
-                                        <span class="new-price">$26,598 </span>
+                                        <span class="new-price"><?php echo  $car_price?></span>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="item">
-                            <div class="car-item-2 text-center">
-                                <div class="car-image">
-                                    <img class="img-fluid" src="images/car/02.jpg" alt="">
-                                    <div class="car-overlay-banner">
-                                        <ul>
-                                            <li><a href="#"><i class="fa fa-link"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-dashboard"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="car-content">
-                                    <a href="#">Lexus GS 450h</a>
-                                    <div class="car-list">
-                                        <ul class="list-inline">
-                                            <li> 2017</li>
-                                            <li> Manual </li>
-                                            <li> 210 hp </li>
-                                            <li> 6,000 mi</li>
-                                        </ul>
-                                    </div>
-                                    <div class="info">
-                                        <p>Dickens with to ghost you will begin to realize why this exercise Pattern is
-                                            called the.</p>
-                                    </div>
-                                    <div class="price">
-                                        <span class="old-price">$40,968</span>
-                                        <span class="new-price">$36,558 </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="car-item-2 text-center">
-                                <div class="car-image">
-                                    <img class="img-fluid" src="images/car/03.jpg" alt="">
-                                    <div class="car-overlay-banner">
-                                        <ul>
-                                            <li><a href="#"><i class="fa fa-link"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-dashboard"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="car-content">
-                                    <a href="#">GTA 5 Lowriders DLC</a>
-                                    <div class="car-list">
-                                        <ul class="list-inline">
-                                            <li> 2017</li>
-                                            <li> Manual </li>
-                                            <li> 210 hp </li>
-                                            <li> 6,000 mi</li>
-                                        </ul>
-                                    </div>
-                                    <div class="info">
-                                        <p>realize why this dickens with to ghost you will begin to exercise Pattern is
-                                            called the.</p>
-                                    </div>
-                                    <div class="price">
-                                        <span class="old-price">$35,568</span>
-                                        <span class="new-price">$32,698 </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="car-item-2 text-center">
-                                <div class="car-image">
-                                    <img class="img-fluid" src="images/car/05.jpg" alt="">
-                                    <div class="car-overlay-banner">
-                                        <ul>
-                                            <li><a href="#"><i class="fa fa-link"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-dashboard"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="car-content">
-                                    <a href="#">Toyota avalon hybrid </a>
-                                    <div class="car-list">
-                                        <ul class="list-inline">
-                                            <li> 2017</li>
-                                            <li> Manual </li>
-                                            <li> 210 hp </li>
-                                            <li> 6,000 mi</li>
-                                        </ul>
-                                    </div>
-                                    <div class="info">
-                                        <p>Dickens with to ghost realize why this you will begin to exercise Pattern is
-                                            called the.</p>
-                                    </div>
-                                    <div class="price">
-                                        <span class="old-price">$44,768</span>
-                                        <span class="new-price">$33,698 </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <?php
+                                if($count==4)
+                                {
+                                    break;
+                                }  
+                            }
+                        ?>
                     </div>
                 </div>
             </div>
@@ -830,17 +672,34 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="section-title">
-                        <span>Read our latest news</span>
-                        <h2>latest news </h2>
+                        <span>Read our latest blog</span>
+                        <h2>latest blog </h2>
                         <div class="separator"></div>
                     </div>
                 </div>
             </div>
             <div class="row">
+            <?php
+                                     $con = mysqli_connect("localhost","root",'',"carintelli");
+
+                            $q1="select * from blog";
+                            $result=mysqli_query($con,$q1);
+                            $count = 0 ;
+                                while($row=mysqli_fetch_assoc($result)){
+                                $count++;
+                                // print_r($row);
+                                $blog_title = $row['title'];
+                                $blog_user = $row['user'];
+                                $blog_content = $row['short_desc'];
+                                $blog_image = $row['image'];
+                                $name = $row['name'];
+                                // echo $blog_image;
+                        ?>
+
                 <div class="col-lg-4 col-md-12">
                     <div class="blog-2">
                         <div class="blog-image">
-                            <img class="img-fluid" src="images/blog/05.jpg" alt="">
+                            <img class="img-fluid" src="<?php echo 'images/blog/'.$blog_image?>" alt="">
                             <div class="date">
                                 <span>aug 17</span>
                             </div>
@@ -848,121 +707,25 @@
                         <div class="blog-content">
                             <div class="blog-admin-main">
                                 <div class="blog-admin">
-                                    <img class="img-fluid" src="images/team/01.jpg" alt="">
-                                    <span>John Doe</span>
-                                </div>
-                                <div class="blog-meta float-right">
-                                    <ul>
-                                        <li>
-                                            <a href="#"> <i class="fa fa-comment"></i><br> 123</a>
-                                        </li>
-                                        <li class="share">
-                                            <a href="#"> <i class="fa fa-share-alt"></i><br> ...</a>
-                                            <div class="blog-social">
-                                                <ul>
-                                                    <li> <a href="#"><i class="fa fa-facebook"></i></a> </li>
-                                                    <li> <a href="#"><i class="fa fa-twitter"></i></a> </li>
-                                                    <li> <a href="#"><i class="fa fa-instagram"></i></a> </li>
-                                                    <li> <a href="#"><i class="fa fa-pinterest-p"></i></a> </li>
-                                                </ul>
-                                            </div>
-                                        </li>
-                                    </ul>
+                                    <img class="img-fluid"src="<?php echo 'images/team/'.$blog_image?> "alt="">
+                                    <span><?php echo $name?></span>
                                 </div>
                             </div>
                             <div class="blog-description text-center">
-                                <a href="#">Does Your Life Lack Meaning</a>
+                                <a href="blog-fullwidth.php"><?php echo $blog_title?></a>
                                 <div class="separator"></div>
-                                <p>You will begin to realize why this exercise Pattern is called the Dickens with
-                                    reference to the ghost</p>
+                                <p><?php echo $blog_content ?></p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-12">
-                    <div class="blog-2">
-                        <div class="blog-image">
-                            <img class="img-fluid" src="images/blog/06.jpg" alt="">
-                            <div class="date">
-                                <span>aug 17</span>
-                            </div>
-                        </div>
-                        <div class="blog-content">
-                            <div class="blog-admin-main">
-                                <div class="blog-admin">
-                                    <img class="img-fluid" src="images/team/02.jpg" alt="">
-                                    <span>Paul Flavius</span>
-                                </div>
-                                <div class="blog-meta float-right">
-                                    <ul>
-                                        <li>
-                                            <a href="#"> <i class="fa fa-comment"></i><br> 123</a>
-                                        </li>
-                                        <li class="share">
-                                            <a href="#"> <i class="fa fa-share-alt"></i><br> ...</a>
-                                            <div class="blog-social">
-                                                <ul>
-                                                    <li> <a href="#"><i class="fa fa-facebook"></i></a> </li>
-                                                    <li> <a href="#"><i class="fa fa-twitter"></i></a> </li>
-                                                    <li> <a href="#"><i class="fa fa-instagram"></i></a> </li>
-                                                    <li> <a href="#"><i class="fa fa-pinterest-p"></i></a> </li>
-                                                </ul>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="blog-description text-center">
-                                <a href="#">The A Z Of Motivation</a>
-                                <div class="separator"></div>
-                                <p>Exercise is called you will begin to Pattern realize why this the Dickens Pattern
-                                    with reference to ghost</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-12">
-                    <div class="blog-2">
-                        <div class="blog-image">
-                            <img class="img-fluid" src="images/blog/07.jpg" alt="">
-                            <div class="date">
-                                <span>aug 17</span>
-                            </div>
-                        </div>
-                        <div class="blog-content">
-                            <div class="blog-admin-main">
-                                <div class="blog-admin">
-                                    <img class="img-fluid" src="images/team/03.jpg" alt="">
-                                    <span>Sara Lisbon</span>
-                                </div>
-                                <div class="blog-meta float-right">
-                                    <ul>
-                                        <li>
-                                            <a href="#"> <i class="fa fa-comment"></i><br> 123</a>
-                                        </li>
-                                        <li class="share">
-                                            <a href="#"> <i class="fa fa-share-alt"></i><br> ...</a>
-                                            <div class="blog-social">
-                                                <ul>
-                                                    <li> <a href="#"><i class="fa fa-facebook"></i></a> </li>
-                                                    <li> <a href="#"><i class="fa fa-twitter"></i></a> </li>
-                                                    <li> <a href="#"><i class="fa fa-instagram"></i></a> </li>
-                                                    <li> <a href="#"><i class="fa fa-pinterest-p"></i></a> </li>
-                                                </ul>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="blog-description text-center">
-                                <a href="#">Motivation In Life</a>
-                                <div class="separator"></div>
-                                <p>Dickens Pattern you will begin to realize why this Dickens exercise is the with
-                                    reference to the ghost</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <?php
+                if($count==4)
+                                {
+                                    break;
+                                }  
+                            }
+                                 ?>
             </div>
         </div>
     </section>
@@ -989,84 +752,50 @@
                 <div class="col-md-12">
                     <div class="owl-carousel owl-theme" data-nav-dots="true" data-items="1" data-md-items="1"
                         data-sm-items="1" data-xs-items="1" data-space="30">
+                        <?php
+                         $con = mysqli_connect("localhost","root",'',"carintelli");
+                         $q1="select * from testimonial";
+                         $count =0;
+                         $result=mysqli_query($con,$q1);
+         
+         
+                                 while($row=mysqli_fetch_assoc($result)){
+                                $count++;
+                                 $name = $row['name'];
+                                 $designation = $row['designation'];
+                                 $image = $row['image'];
+                                 $car_image = $row['car_image'];
+                                 $review = $row['review'];
+                        ?>
                         <div class="item">
                             <div class="testimonial-block">
                                 <div class="row">
                                     <div class="col-md-3">
                                         <div class="testimonial-avtar">
-                                            <img class="img-fluid center-block" src="images/team/01.jpg" alt="">
+                                            <img class="img-fluid center-block" src="<?php echo 'images/team/'.$image?>" alt="">
                                         </div>
                                     </div>
                                     <div class="col-lg-9 col-md-9 col-sm-9">
                                         <div class="testimonial-content">
-                                            <p><i class="fa fa-quote-left"></i> <span>Type and bled it to make lorem
-                                                    Ipsum is simply dummy text of the printin a galley of a type
-                                                    specimen book. It has survived not only five centuries, but also the
-                                                    leap into electronictting, remaining essentially unchanged. It was
-                                                    popularised in the 1960s with the release of Letraset sheets
-                                                    containing Lorem Ipsum passages.</span> <i
+                                            <p><i class="fa fa-quote-left"></i> <span><?php echo $review?></span> <i
                                                     class="fa fa-quote-right float-right"></i></p>
                                         </div>
                                         <div class="testimonial-info">
-                                            <h6>Alice Williams</h6>
-                                            <span>Auto Dealer</span>
+                                            <h6><?php echo $name?></h6>
+                                            <span><?php echo $designation?></span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="item">
-                            <div class="testimonial-block">
-                                <div class="row">
-                                    <div class="col-md-3">
-                                        <div class="testimonial-avtar">
-                                            <img class="img-fluid center-block" src="images/team/02.jpg" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-9 col-md-9 col-sm-9">
-                                        <div class="testimonial-content">
-                                            <p><i class="fa fa-quote-left"></i> <span>It was popularised in the 1960s
-                                                    lorem Ipsum is simply dummy text of the printin a galley of type and
-                                                    bled it to make a type specimen book. It has survived not only five
-                                                    centuries, but also the leap into electronictting, remaining
-                                                    essentially unchanged. with the release of Letraset sheets
-                                                    containing Lorem Ipsum passages.</span> <i
-                                                    class="fa fa-quote-right float-right"></i></p>
-                                        </div>
-                                        <div class="testimonial-info">
-                                            <h6>Michael Bean</h6>
-                                            <span>Car Intelli</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="testimonial-block">
-                                <div class="row">
-                                    <div class="col-md-3">
-                                        <div class="testimonial-avtar">
-                                            <img class="img-fluid center-block" src="images/team/03.jpg" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-9 col-md-9 col-sm-9">
-                                        <div class="testimonial-content">
-                                            <p><i class="fa fa-quote-left"></i> <span>Remaining essentially unchanged
-                                                    lorem Ipsum is simply dummy text of the printin a galley of type and
-                                                    bled it to make a type specimen book. It has survived not only five
-                                                    centuries, but also the leap into electronictting. It was
-                                                    popularised in the 1960s with the release of Letraset sheets
-                                                    containing Lorem Ipsum passages.</span> <i
-                                                    class="fa fa-quote-right float-right"></i></p>
-                                        </div>
-                                        <div class="testimonial-info">
-                                            <h6>Anne Smith</h6>
-                                            <span>Customer</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        
+                        <?php
+                                if($count==3)
+                                {
+                                    break;
+                                }  
+                            }
+                        ?>
                     </div>
                 </div>
             </div>
@@ -1114,17 +843,7 @@
                 <div class="col-lg-3 col-md-12">
                     <img class="img-fluid" id="logo_footer_dark" src="images/logo-dark.png" alt="">
                 </div>
-                <div class="col-lg-5 col-md-12">
-                    <div class="footer-nav text-lg-right text-center">
-                        <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">About us</a></li>
-                            <li><a href="#">Service</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Contact us</a></li>
-                        </ul>
-                    </div>
-                </div>
+               
                 <div class="col-lg-4 col-md-12">
                     <div class="social text-lg-right text-center">
                         <ul>
@@ -1141,9 +860,6 @@
                                 <a href="#"> <i class="fa fa-dribbble"></i> </a>
                             </li>
                             <li>
-                                <a href="#"> <i class="fa fa-vimeo"></i> </a>
-                            </li>
-                            <li>
                                 <a href="#"> <i class="fa fa-linkedin"></i> </a>
                             </li>
                         </ul>
@@ -1151,12 +867,10 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-12">
-                    <hr>
-                </div>
+                
             </div>
             <div class="row">
-                <div class="col-lg-5 col-md-12">
+                <!-- <div class="col-lg-5 col-md-12">
                     <div class="about-content">
                         <h6 class="text-black">about us</h6>
                         <p class="text-gray">Car Intelli is the bestCar Recommender We provide everything you need to
@@ -1210,7 +924,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
         <div class="copyright">
@@ -1218,15 +932,13 @@
                 <div class="row">
                     <div class="col-lg-6 col-md-12">
                         <div class="text-lg-left text-center">
-                            <p>©Copyright 2018 Car Intelli Developed by <a href="../../index-2.html"
-                                    target="_blank">MS-Orbit Tech</a></p>
+                        <p>©Copyright 2022 Car Intelli Developed by <a href="https://jinnah.edu/" target="_blank">MAJU</a></p>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-12">
                         <ul class="list-inline text-lg-right text-center">
-                            <li><a href="#">privacy policy </a> | </li>
-                            <li><a href="#">terms and conditions </a> |</li>
-                            <li><a href="#">contact us </a></li>
+                            <li><a href="team-02.php">Our Team </a> |</li>
+                            <li><a href="about-01.php">About us </a></li>
                         </ul>
                     </div>
                 </div>
@@ -1236,38 +948,6 @@
 
     <!--=================================
  footer -->
-
-
-    <!--=================================
- color customizer -->
-
-    <div class="style-customizer closed">
-        <div class="buy-button"> <a class="opener" href="#"><i class="fa fa-cog fa-spin"></i></a> </div>
-        <div class="clearfix content-chooser">
-            <a target="_blank" class="button"
-                href="../../item/car-dealer-the-best-car-dealer-automotive-responsive-html5-template/19226545.html?ref=Potenzaglobalsolutions">purchase
-                now</a>
-            <h3>Color Schemes</h3>
-            <p>Which theme color you want to use? Here are some predefined colors.</p>
-            <ul class="styleChange clearfix">
-                <li class="skin-default selected" title="Default" data-style="skin-default"></li>
-                <li class="skin-blue" title="Blue" data-style="skin-blue"></li>
-                <li class="skin-orange" title="Orange" data-style="skin-orange"></li>
-                <li class="skin-purple" title="purple" data-style="skin-purple"></li>
-                <li class="skin-gold" title="gold" data-style="skin-gold"></li>
-                <li class="skin-green" title="green" data-style="skin-green"></li>
-                <li class="skin-palatinate-blue" title="palatinate-blue" data-style="skin-palatinate-blue"></li>
-                <li class="skin-yellow" title="Yellow" data-style="skin-yellow"></li>
-            </ul>
-            <ul class="resetAll">
-                <li><a class="button button-reset" href="#">Reset All</a></li>
-            </ul>
-        </div>
-    </div>
-
-    <!--=================================
- color customizer -->
-
 
     <!--=================================
  back to top -->

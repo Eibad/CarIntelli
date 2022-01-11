@@ -15,7 +15,7 @@ if(isset($_POST['submit'])){
 
     if($password == $confirm_password){
 
-        $password = md5($password);
+        // $password = md5($password);
         $query = "INSERT INTO register(fname,lname,email,password,gender) VALUES ('$fname','$lname','$email','$password','$gender')";
         $query_run = mysqli_query($con, $query);
     

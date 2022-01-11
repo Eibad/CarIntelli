@@ -88,7 +88,7 @@
                     <div class="col-lg-6 col-md-12">
                         <div class="topbar-left text-lg-left text-center">
                             <ul class="list-inline">
-                                <li> <i class="fa fa-envelope-o"> </i> support@website.com</li>
+                                <li> <i class="fa fa-envelope-o"> </i> support@carintelli.com</li>
                                 <li> <i class="fa fa-clock-o"></i> Mon - Sat 8.00 - 18.00. Sunday CLOSED</li>
                             </ul>
                         </div>
@@ -96,11 +96,11 @@
                     <div class="col-lg-6 col-md-12">
                         <div class="topbar-right text-lg-right text-center">
                             <ul class="list-inline">
-                                <li> <i class="fa fa-phone"></i> (007) 123 456 7890</li>
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                <li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
+                                <li> <i class="fa fa-phone"></i> +92 00 786 01</li>
+                                <li><a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="https://twitter.com/?lang=en"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="https://www.instagram.com/?hl=en"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="https://www.youtube.com/"><i class="fa fa-youtube-play"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -128,7 +128,7 @@
                                 <!-- menu links -->
                                 <ul class="menu-links">
                                     <!-- active class -->
-                                    <li><a href="index-3.html"> Home </a>
+                                    <li><a href="index-3.php"> Home </a>
 
                                     </li>
                                     <li><a href="listing-01.php">Recommend Me a Car </a>
@@ -148,6 +148,19 @@
                                     </li>
                                     <li>
                                     </li>
+                                    <?php
+                                        if (isset($_SESSION['email'])){
+                                    ?>
+                                    <li><a href="logout.php"> Logout </a>
+                                    </li>
+                                    <?php
+                                        }
+                                        else{
+                                            ?>
+                                            <li><a href="login.php"> Login </a> 
+                                            <?php
+                                        }
+                                    ?>
                                 </ul>
                             </div>
                         </div>
@@ -422,78 +435,47 @@ our History-->
             <div class="row">
                 <div class="col-md-12">
                     <div class="owl-carousel owl-theme" data-nav-dots="true" data-items="3" data-md-items="3" data-sm-items="2" data-xs-items="1" data-space="30">
+                        <?php
+                         $con = mysqli_connect("localhost","root",'',"carintelli");
+                         $q1="select * from testimonial";
+                         $count =0;
+                         $result=mysqli_query($con,$q1);
+         
+         
+                                 while($row=mysqli_fetch_assoc($result)){
+                                $count++;
+                                 $name = $row['name'];
+                                 $designation = $row['designation'];
+                                 $image = $row['image'];
+                                 $car_image = $row['car_image'];
+                                 $review = $row['review'];
+                        ?>
                         <div class="item">
                             <div class="testimonial-block text-center">
                                 <div class="testimonial-image">
-                                    <img class="img-fluid" src="images/testimonial/01.jpg" alt="">
+                                    <img class="img-fluid" src="<?php echo 'images/testimonial/'.$car_image?>" alt="">
                                 </div>
                                 <div class="testimonial-box">
                                     <div class="testimonial-avtar">
-                                        <img class="img-fluid" src="images/team/01.jpg" alt="">
-                                        <h6>Alice Williams</h6>
-                                        <span>Auto Dealer</span>
+                                        <img class="img-fluid" src="<?php echo 'images/team/'.$image?>" alt="">
+                                        <h6><?php echo $name?></h6>
+                                        <span><?php echo $designation?></span>
                                     </div>
                                     <div class="testimonial-content">
-                                        <p>It has survived not only five centuries. lorem Ipsum is simply dummy text of the printin a galley of type and bled it to make a type specimen book.</p>
+                                        <p><?php echo $review?></p>
                                         <i class="fa fa-quote-right"></i>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="item">
-                            <div class="testimonial-block text-center">
-                                <div class="testimonial-image">
-                                    <img class="img-fluid" src="images/testimonial/02.jpg" alt="">
-                                </div>
-                                <div class="testimonial-box">
-                                    <div class="testimonial-avtar">
-                                        <img class="img-fluid" src="images/team/02.jpg" alt="">
-                                        <h6>Michael Bean</h6>
-                                        <span>Car Intelli</span>
-                                    </div>
-                                    <div class="testimonial-content">
-                                        <p>A galley of type and bled it to make a type specimen book. Ipsum is simply dummy text of the printin It has survived not only five centuries.</p>
-                                        <i class="fa fa-quote-right"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="testimonial-block text-center">
-                                <div class="testimonial-image">
-                                    <img class="img-fluid" src="images/testimonial/03.jpg" alt="">
-                                </div>
-                                <div class="testimonial-box">
-                                    <div class="testimonial-avtar">
-                                        <img class="img-fluid" src="images/team/03.jpg" alt="">
-                                        <h6>Felica Queen</h6>
-                                        <span>Auto Dealer</span>
-                                    </div>
-                                    <div class="testimonial-content">
-                                        <p>Text of the printin a galley of type and bled it to a type specimen book. It has survived not only five centuries make Lorem Ipsum is simply dummy.</p>
-                                        <i class="fa fa-quote-right"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="testimonial-block text-center">
-                                <div class="testimonial-image">
-                                    <img class="img-fluid" src="images/testimonial/04.jpg" alt="">
-                                </div>
-                                <div class="testimonial-box">
-                                    <div class="testimonial-avtar">
-                                        <img class="img-fluid" src="images/team/04.jpg" alt="">
-                                        <h6>Sara Lisbon</h6>
-                                        <span>Customer</span>
-                                    </div>
-                                    <div class="testimonial-content">
-                                        <p>Printin a galley of type and bled It has survived not lorem Ipsum is simply dummy text of the it to make a type specimen book only five centuries.</p>
-                                        <i class="fa fa-quote-right"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <?php
+                                if($count==4)
+                                {
+                                    break;
+                                }  
+                            }
+                        ?>
+                        
                     </div>
                 </div>
             </div>
@@ -513,12 +495,12 @@ our History-->
                 <div class="col-md-12">
                     <div class="social">
                         <ul>
-                            <li><a class="facebook" href="#">facebook <i class="fa fa-facebook"></i> </a></li>
-                            <li><a class="twitter" href="#">twitter <i class="fa fa-twitter"></i> </a></li>
-                            <li><a class="pinterest" href="#">pinterest <i class="fa fa-pinterest-p"></i> </a></li>
-                            <li><a class="dribbble" href="#">dribbble <i class="fa fa-dribbble"></i> </a></li>
-                            <li><a class="google-plus" href="#">google plus <i class="fa fa-google-plus"></i> </a></li>
-                            <li><a class="behance" href="#">behance <i class="fa fa-behance"></i> </a></li>
+                            <li><a class="facebook" href="https://www.facebook.com/">facebook <i class="fa fa-facebook"></i> </a></li>
+                            <li><a class="twitter" href="https://twitter.com/?lang=en">twitter <i class="fa fa-twitter"></i> </a></li>
+                            <li><a class="pinterest" href="https://www.pinterest.com/">pinterest <i class="fa fa-pinterest-p"></i> </a></li>
+                            <li><a class="dribbble" href="https://dribbble.com/">dribbble <i class="fa fa-dribbble"></i> </a></li>
+                            <li><a class="google-plus" href="https://myaccount.google.com/intro/profile">google plus <i class="fa fa-google-plus"></i> </a></li>
+                            <li><a class="behance" href="https://www.behance.net/">behance <i class="fa fa-behance"></i> </a></li>
                         </ul>
                     </div>
                 </div>
@@ -531,25 +513,13 @@ our History-->
                     </div>
                     <div class="address">
                         <ul>
-                            <li> <i class="fa fa-map-marker"></i><span>220E Front St. Burlington NC 27215</span> </li>
-                            <li> <i class="fa fa-phone"></i><span>(007) 123 456 7890</span> </li>
-                            <li> <i class="fa fa-envelope-o"></i><span>support@website.com</span> </li>
+                            <li> <i class="fa fa-map-marker"></i><span>Lal Kothi Bus Stop, Main Shahrah-e-Faisal, 22-E, Block-6, PECHS, Karachi-75400</span> </li>
+                            <li> <i class="fa fa-phone"></i><span>+92 00 786 01</span> </li>
+                            <li> <i class="fa fa-envelope-o"></i><span>support@carintelli.com</span> </li>
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="usefull-link">
-                        <h6 class="text-white">Useful Links</h6>
-                        <ul>
-                            <li><a href="#"><i class="fa fa-angle-double-right"></i> Change Oil and Filter</a></li>
-                            <li><a href="#"><i class="fa fa-angle-double-right"></i> Brake Pads Replacement</a></li>
-                            <li><a href="#"><i class="fa fa-angle-double-right"></i> Timing Belt Replacement</a></li>
-                            <li><a href="#"><i class="fa fa-angle-double-right"></i> Pre-purchase Car Inspection</a></li>
-                            <li><a href="#"><i class="fa fa-angle-double-right"></i> Starter Replacement</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-4 col-md-6">
                     <div class="recent-post-block">
                         <h6 class="text-white">recent posts </h6>
                         <div class="recent-post">
@@ -581,7 +551,7 @@ our History-->
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-4 col-md-6">
                     <div class="news-letter">
                         <h6 class="text-white">subscribe Our Newsletter </h6>
                         <p>Keep up on our always evolving products features and technology. Enter your e-mail and subscribe to our newsletter.</p>
@@ -597,7 +567,7 @@ our History-->
                 <div class="row">
                     <div class="col-lg-6 col-md-12">
                         <div class="text-lg-left text-center">
-                            <p>©Copyright 2018 Car Intelli Developed by <a href="../../index.htm" target="_blank">MS-Orbit Tech</a></p>
+                            <p>©Copyright 2022 Car Intelli Developed by <a href="https://jinnah.edu/" target="_blank">MAJU</a></p>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-12">

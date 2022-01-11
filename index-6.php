@@ -94,7 +94,7 @@
                     <div class="col-lg-6 col-md-12">
                         <div class="topbar-left text-lg-left text-center">
                             <ul class="list-inline">
-                                <li> <i class="fa fa-envelope-o"> </i> support@website.com</li>
+                                <li> <i class="fa fa-envelope-o"> </i> support@carintelli.com</li>
                                 <li> <i class="fa fa-clock-o"></i> Mon - Sat 8.00 - 18.00. Sunday CLOSED</li>
                             </ul>
                         </div>
@@ -102,11 +102,11 @@
                     <div class="col-lg-6 col-md-12">
                         <div class="topbar-right text-lg-right text-center">
                             <ul class="list-inline">
-                                <li> <i class="fa fa-phone"></i> (007) 123 456 7890</li>
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                <li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
+                                <li> <i class="fa fa-phone"></i> +92 00 786 01</li>
+                                <li><a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="https://twitter.com/?lang=en"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="https://www.instagram.com/?hl=en"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="https://www.youtube.com/"><i class="fa fa-youtube-play"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -139,7 +139,7 @@
                                         <ul class="drop-down-multilevel">
                                             <li><a href="index-2.html">Home 1</a></li>
                                             <li><a href="index-2.html">Home 2</a></li>
-                                            <li><a href="index-3.html">Home 3</a></li>
+                                            <li><a href="index-3.php">Home 3</a></li>
                                             <li><a href="index-4.html">Home 4</a></li>
                                             <li><a href="index-5.html">Home 5</a></li>
                                             <li class="active"><a href="index-6.html">Home 6</a></li>
@@ -182,7 +182,7 @@
                                                 <div class="grid-col-3">
                                                     <ul>
                                                         <li><a href="login.html">login</a></li>
-                                                        <li><a href="register.html">register</a></li>
+                                                        <li><a href="register.php">register</a></li>
                                                         <li><a href="error-404.html">error 404</a></li>
                                                         <li><a href="coming-soon.html">coming soon</a></li>
                                                         <li><a href="typography.html">typography</a></li>
@@ -1430,7 +1430,7 @@ testimonial -->
                     <div class="quote-content text-center">
                         <i class="fa fa-car"></i>
                         <h2 class="text-white">do you need help in choosing a car? </h2>
-                        <p class="text-white">Call us : <span class="text-red"> (007) 123 456 7890</span> </p>
+                        <p class="text-white">Call us : <span class="text-red"> +92 00 786 01</span> </p>
                     </div>
                 </div>
             </div>
@@ -1541,7 +1541,7 @@ get-quote -->
                 <div class="row">
                     <div class="col-lg-6 col-md-12">
                         <div class="text-lg-left text-center">
-                            <p>©Copyright 2018 Car Intelli Developed by <a href="../../index.htm" target="_blank">MS-Orbit Tech</a></p>
+                            <p>©Copyright 2022 Car Intelli Developed by <a href="https://jinnah.edu/" target="_blank">MAJU</a></p>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-12">

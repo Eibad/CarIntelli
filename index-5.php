@@ -107,7 +107,7 @@
                                         <ul class="drop-down-multilevel">
                                             <li><a href="index-2.html">Home 1</a></li>
                                             <li><a href="index-2.html">Home 2</a></li>
-                                            <li><a href="index-3.html">Home 3</a></li>
+                                            <li><a href="index-3.php">Home 3</a></li>
                                             <li><a href="index-4.html">Home 4</a></li>
                                             <li class="active"><a href="index-5.html">Home 5</a></li>
                                             <li><a href="index-6.html">Home 6</a></li>
@@ -150,7 +150,7 @@
                                                 <div class="grid-col-3">
                                                     <ul>
                                                         <li><a href="login.html">login</a></li>
-                                                        <li><a href="register.html">register</a></li>
+                                                        <li><a href="register.php">register</a></li>
                                                         <li><a href="error-404.html">error 404</a></li>
                                                         <li><a href="coming-soon.html">coming soon</a></li>
                                                         <li><a href="typography.html">typography</a></li>
@@ -1567,7 +1567,7 @@ our-clients -->
                 <div class="row">
                     <div class="col-lg-6 col-md-12">
                         <div class="text-lg-left text-center">
-                            <p>©Copyright 2018 Car Intelli Developed by <a href="../../index.htm" target="_blank">MS-Orbit Tech</a></p>
+                            <p>©Copyright 2022 Car Intelli Developed by <a href="https://jinnah.edu/" target="_blank">MAJU</a></p>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-12">

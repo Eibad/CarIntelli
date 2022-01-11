@@ -9,11 +9,14 @@ if(isset($_REQUEST['submit']))
 
     $email = $_REQUEST['email'];
     $password = $_REQUEST['password'];
-    $password = md5($password);
+    // $password = md5($password);
     $line = "select * from register where email='$email' and password='$password'";
     $query = mysqli_query($con,$line);
     $result = mysqli_num_rows($query);
 
+    print_r($email);
+    print_r($password);
+    
     if($result>0)
     {
     

@@ -104,7 +104,7 @@
                                     <!-- active class -->
                                     
                                     <li><a href="login.php">Login </i></a>
-                                    <li><a href="register.html">Register</a></li>
+                                    <li><a href="register.php">Register</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -158,7 +158,7 @@
                     <!-- LAYER NR. 6 -->
                     <div class="tp-caption button red rs-parallaxlevel-1" id="slide-5-layer-8" data-x="14" data-y="bottom" data-voffset="39" data-width="['auto']" data-height="['auto']" data-type="button" data-responsive_offset="on" data-frames='[{"delay":3990,"speed":600,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"nothing"},{"frame":"hover","speed":"0","ease":"Linear.easeNone","force":true,"to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(255, 255, 255, 1.00);bg:rgba(219, 45, 46, 1.00);bc:rgba(0, 0, 0, 1.00);bs:solid;bw:0 0 0 0;"}]'
                         data-textalign="['left','left','left','left']" data-paddingtop="[10,10,10,10]" data-paddingright="[30,30,30,30]" data-paddingbottom="[10,10,10,10]" data-paddingleft="[30,30,30,30]" style="z-index: 10; white-space: nowrap; font-size: 14px; line-height: 16px; font-weight: 400; font-family:Open Sans;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">
-                        <a href="index-3.html">Explore Now</a></div>
+                        <a href="index-3.php">Explore Now</a></div>
                 </li>
                 <!-- SLIDE  -->
                 <li data-index="rs-6" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300" data-thumb="revolution/assets/100x50_1b65c-bg-2.jpg" data-rotate="0"
@@ -191,7 +191,7 @@
 
                     <!-- LAYER NR. 12 -->
                     <div class="tp-caption button red rs-parallaxlevel-1" id="slide-6-layer-8" data-x="10" data-y="bottom" data-voffset="39" data-width="['auto']" data-height="['auto']" data-type="button" data-responsive_offset="on" data-frames='[{"delay":3990,"speed":600,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"nothing"},{"frame":"hover","speed":"0","ease":"Linear.easeNone","force":true,"to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(255, 255, 255, 1.00);bg:rgba(219, 45, 46, 1.00);bc:rgba(0, 0, 0, 1.00);bs:solid;bw:0 0 0 0;"}]'
-                        data-textalign="['left','left','left','left']" data-paddingtop="[10,10,10,10]" data-paddingright="[30,30,30,30]" data-paddingbottom="[10,10,10,10]" data-paddingleft="[30,30,30,30]" style="z-index: 10; white-space: nowrap; font-size: 14px; line-height: 16px; font-weight: 400; font-family:Open Sans; outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;"><a href="index-3.html">Explore Now</a></div>
+                        data-textalign="['left','left','left','left']" data-paddingtop="[10,10,10,10]" data-paddingright="[30,30,30,30]" data-paddingbottom="[10,10,10,10]" data-paddingleft="[30,30,30,30]" style="z-index: 10; white-space: nowrap; font-size: 14px; line-height: 16px; font-weight: 400; font-family:Open Sans; outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;"><a href="index-3.php">Explore Now</a></div>
                 </li>
             </ul>
             <div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>

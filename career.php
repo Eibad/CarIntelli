@@ -85,7 +85,7 @@
                     <div class="col-lg-6 col-md-12">
                         <div class="topbar-left text-lg-left text-center">
                             <ul class="list-inline">
-                                <li> <i class="fa fa-envelope-o"> </i> support@website.com</li>
+                                <li> <i class="fa fa-envelope-o"> </i> support@carintelli.com</li>
                                 <li> <i class="fa fa-clock-o"></i> Mon - Sat 8.00 - 18.00. Sunday CLOSED</li>
                             </ul>
                         </div>
@@ -93,11 +93,11 @@
                     <div class="col-lg-6 col-md-12">
                         <div class="topbar-right text-lg-right text-center">
                             <ul class="list-inline">
-                                <li> <i class="fa fa-phone"></i> (007) 123 456 7890</li>
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                <li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
+                                <li> <i class="fa fa-phone"></i> +92 00 786 01</li>
+                                <li><a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="https://twitter.com/?lang=en"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="https://www.instagram.com/?hl=en"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="https://www.youtube.com/"><i class="fa fa-youtube-play"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -125,7 +125,7 @@
                                 <!-- menu links -->
                                 <ul class="menu-links">
                                     <!-- active class -->
-                                    <li><a href="index-3.html"> Home </a>
+                                    <li><a href="index-3.php"> Home </a>
 
                                     </li>
                                     <li><a href="listing-01.php">Recommend Me a Car </a>
@@ -145,6 +145,19 @@
                                     </li>
                                     <li>
                                     </li>
+                                    <?php
+                                        if (isset($_SESSION['email'])){
+                                    ?>
+                                    <li><a href="logout.php"> Logout </a>
+                                    </li>
+                                    <?php
+                                        }
+                                        else{
+                                            ?>
+                                            <li><a href="login.php"> Login </a> 
+                                            <?php
+                                        }
+                                    ?>
                                 </ul>
                             </div>
                         </div>
@@ -261,12 +274,12 @@ career  -->
                 <div class="col-md-12">
                     <div class="social">
                         <ul>
-                            <li><a class="facebook" href="#">facebook <i class="fa fa-facebook"></i> </a></li>
-                            <li><a class="twitter" href="#">twitter <i class="fa fa-twitter"></i> </a></li>
-                            <li><a class="pinterest" href="#">pinterest <i class="fa fa-pinterest-p"></i> </a></li>
-                            <li><a class="dribbble" href="#">dribbble <i class="fa fa-dribbble"></i> </a></li>
-                            <li><a class="google-plus" href="#">google plus <i class="fa fa-google-plus"></i> </a></li>
-                            <li><a class="behance" href="#">behance <i class="fa fa-behance"></i> </a></li>
+                            <li><a class="facebook" href="https://www.facebook.com/">facebook <i class="fa fa-facebook"></i> </a></li>
+                            <li><a class="twitter" href="https://twitter.com/?lang=en">twitter <i class="fa fa-twitter"></i> </a></li>
+                            <li><a class="pinterest" href="https://www.pinterest.com/">pinterest <i class="fa fa-pinterest-p"></i> </a></li>
+                            <li><a class="dribbble" href="https://dribbble.com/">dribbble <i class="fa fa-dribbble"></i> </a></li>
+                            <li><a class="google-plus" href="https://myaccount.google.com/intro/profile">google plus <i class="fa fa-google-plus"></i> </a></li>
+                            <li><a class="behance" href="https://www.behance.net/">behance <i class="fa fa-behance"></i> </a></li>
                         </ul>
                     </div>
                 </div>
@@ -279,25 +292,13 @@ career  -->
                     </div>
                     <div class="address">
                         <ul>
-                            <li> <i class="fa fa-map-marker"></i><span>220E Front St. Burlington NC 27215</span> </li>
-                            <li> <i class="fa fa-phone"></i><span>(007) 123 456 7890</span> </li>
-                            <li> <i class="fa fa-envelope-o"></i><span>support@website.com</span> </li>
+                            <li> <i class="fa fa-map-marker"></i><span>Lal Kothi Bus Stop, Main Shahrah-e-Faisal, 22-E, Block-6, PECHS, Karachi-75400</span> </li>
+                            <li> <i class="fa fa-phone"></i><span>+92 00 786 01</span> </li>
+                            <li> <i class="fa fa-envelope-o"></i><span>support@carintelli.com</span> </li>
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="usefull-link">
-                        <h6 class="text-white">Useful Links</h6>
-                        <ul>
-                            <li><a href="#"><i class="fa fa-angle-double-right"></i> Change Oil and Filter</a></li>
-                            <li><a href="#"><i class="fa fa-angle-double-right"></i> Brake Pads Replacement</a></li>
-                            <li><a href="#"><i class="fa fa-angle-double-right"></i> Timing Belt Replacement</a></li>
-                            <li><a href="#"><i class="fa fa-angle-double-right"></i> Pre-purchase Car Inspection</a></li>
-                            <li><a href="#"><i class="fa fa-angle-double-right"></i> Starter Replacement</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-4 col-md-6">
                     <div class="recent-post-block">
                         <h6 class="text-white">recent posts </h6>
                         <div class="recent-post">
@@ -329,7 +330,7 @@ career  -->
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-4 col-md-6">
                     <div class="news-letter">
                         <h6 class="text-white">subscribe Our Newsletter </h6>
                         <p>Keep up on our always evolving products features and technology. Enter your e-mail and subscribe to our newsletter.</p>
@@ -345,7 +346,7 @@ career  -->
                 <div class="row">
                     <div class="col-lg-6 col-md-12">
                         <div class="text-lg-left text-center">
-                            <p>©Copyright 2018 Car Intelli Developed by <a href="../../index.htm" target="_blank">MS-Orbit Tech</a></p>
+                            <p>©Copyright 2022 Car Intelli Developed by <a href="https://jinnah.edu/" target="_blank">MAJU</a></p>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-12">

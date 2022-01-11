@@ -795,7 +795,7 @@
                     <div class="quote-content text-center">
                         <i class="fa fa-car"></i>
                         <h2 class="text-white">do you need help in choosing a car? </h2>
-                        <p class="text-white">Call us : <span class="text-red"> (007) 123 456 7890</span> </p>
+                        <p class="text-white">Call us : <span class="text-red"> +92 00 786 01</span> </p>
                     </div>
                 </div>
             </div>
@@ -815,7 +815,7 @@ get-quote -->
                 <div class="row">
                     <div class="col-lg-6 col-md-12">
                         <div class="text-lg-left text-center">
-                            <p>©Copyright 2018 Car Intelli Developed by <a href="../../index.htm" target="_blank">MS-Orbit Tech</a></p>
+                            <p>©Copyright 2022 Car Intelli Developed by <a href="https://jinnah.edu/" target="_blank">MAJU</a></p>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-12">
