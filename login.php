@@ -150,13 +150,18 @@
                                     <?php
                                         if (isset($_SESSION['email'])){
                                     ?>
-                                    <li><a href="logout.php"> Logout </a>
+                                    <li><a href="logout.php"> Logout <i class="fa fa-angle-down fa-indicator"></i> </a>
+                                        <ul class="drop-down-multilevel right-menu">
+                                            <li><a href="about-01.php">Log out</a></li>
+                                        </ul>
                                     </li>
                                     <?php
                                         }
                                         else{
                                             ?>
-                                            <li><a href="login.php"> Login </a> 
+                                            <li><a href="login.php"> Login</i></a>
+                                
+                                            </li>
                                             <?php
                                         }
                                     ?>
@@ -211,7 +216,7 @@
                         <div class="gray-form clearfix">
                             <div class="form-group">
                                 <label for="name">Email </label>
-                                <input id="name" class="form-control" type="text" placeholder="Email" name="email">
+                                <input id="name" class="form-control" type="email" placeholder="Email" name="email">
                             </div>
                             <div class="form-group">
                                 <label for="Password">Password* </label>

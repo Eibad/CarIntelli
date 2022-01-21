@@ -161,7 +161,10 @@ session_start();
                                     <?php
                                         if (isset($_SESSION['email'])){
                                     ?>
-                                    <li><a href="logout.php"> Logout </a>
+                                    <li><a style="color: red;" href="logout.php"><?php echo(($_SESSION['fname']))?> <i class="fa fa-angle-down fa-indicator"></i> </a>
+                                    <ul class="drop-down-multilevel right-menu">
+                                            <li><a href="logout.php">Logout</a></li>
+                                        </ul>
                                     </li>
                                     <?php
                                         }
@@ -171,19 +174,7 @@ session_start();
                                             <?php
                                         }
                                     ?>
-                                    <?php
-                                        if (isset($_SESSION['email'])){
-                                    ?>
-                                    <li><a href="logout.php"> Logout </a>
-                                    </li>
-                                    <?php
-                                        }
-                                        else{
-                                            ?>
-                                            <li><a href="login.php"> Login </a> 
-                                            <?php
-                                        }
-                                    ?>
+                                    
                                 </ul>
 
                                 
@@ -308,92 +299,119 @@ session_start();
     <section class="search white-bg">
         <div class="container">
             <div class="search-block">
-                <div class="row">
-                    <div class="col-md-8">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <span>Select make</span>
-                                <div class="selected-box">
-                                    <select class="selectpicker">
-                                        <option>Make </option>
-                                        <option>BMW</option>
-                                        <option>Honda </option>
-                                        <option>Hyundai </option>
-                                        <option>Nissan </option>
-                                        <option>Mercedes Benz </option>
-                                    </select>
+                <form action="listing-01.php" method="POST">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <span>Select make</span>
+                                    <div class="selected-box">
+                                        <select  name="make" class="selectpicker">
+                                            <option value="all">All Make </option>
+                                            <option value="Toyota">Toyota</option>
+                                            <option value="Lexus">Lexus </option>
+                                            <option value="Acura">Acura </option>
+                                            <option value="Suzuki">Suzuki </option>
+                                            <option value="Honda">Honda </option>
+                                        </select>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-md-4">
-                                <span>Select model</span>
-                                <div class="selected-box">
-                                    <select class="selectpicker">
-                                        <option>Model</option>
-                                        <option>3-Series</option>
-                                        <option>Carrera</option>
-                                        <option>GT-R</option>
-                                        <option>Cayenne</option>
-                                        <option>Mazda6</option>
-                                        <option>Macan</option>
-                                    </select>
+                                <div class="col-md-4">
+                                    <span>Select model</span>
+                                    <div class="selected-box">
+                                        <select name="model" class="selectpicker">
+                                            <option value="all">All Model</option>
+                                            <option value="2022">2022</option>
+                                            <option value="2019">2019</option>
+                                            <option value="2017">2017</option>
+                                            <option value="2016">2016</option>
+                                            <option value="2014">2014</option>
+                                            <option value="2011">2011</option>
+                                            <option value="2010">2010</option>
+                                            <option value="2009">2009</option>
+                                        </select>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-md-4">
-                                <span>Select yar</span>
-                                <div class="selected-box">
-                                    <select class="selectpicker">
-                                        <option>Year</option>
-                                        <option>2010</option>
-                                        <option>2011</option>
-                                        <option>2012</option>
-                                        <option>2013</option>
-                                        <option>2014</option>
-                                        <option>2015</option>
-                                        <option>2016</option>
-                                    </select>
+                                <div class="col-md-4">
+                                    <span>Select Transmission</span>
+                                    <div class="selected-box">
+                                        <select name="transmission" class="selectpicker">
+                                            <option value="all">All Transmission</option>
+                                            <option value"manual">Manual</option>
+                                            <option value="automatic">Automatic</option>
+                                        </select>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-md-4">
-                                <span>Select body style</span>
-                                <div class="selected-box">
-                                    <select class="selectpicker">
-                                        <option>Body style</option>
-                                        <option>2dr Car</option>
-                                        <option>4dr Car</option>
-                                        <option>Convertible</option>
-                                        <option>Sedan</option>
-                                        <option>Sports Utility</option>
-                                    </select>
+                                <div class="col-md-4">
+                                    <span>Select body style</span>
+                                    <div class="selected-box">
+                                        <select name="body" class="selectpicker">
+                                            <option value="all">All Body style</option>
+                                            <option value="Hatchback">Hatchback</option>
+                                            <option value="Sedan">Sedan</option>
+                                            <option value="Crossover">Crossover</option>
+                                            <option value="Suv">SUV</option>
+                                        </select>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-md-4">
-                                <span>Select vehicle status</span>
-                                <div class="selected-box">
-                                    <select class="selectpicker">
-                                        <option>Vehicle Status</option>
-                                        <option>Condition</option>
-                                        <option>All Conditions</option>
-                                        <option>Condition</option>
-                                        <option>Brand New</option>
-                                        <option>Slightly Used</option>
-                                        <option>Used</option>
-                                    </select>
+                                <div class="col-md-4">
+                                    <span>Select vehicle status</span>
+                                    <div class="selected-box">
+                                        <select name="condition" class="selectpicker">
+                                            <option value="all">All Conditions</option>
+                                            <option value="new">Brand New</option>
+                                            <option value="used">Used</option>
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="price-slide">
-                            <div class="price">
-                                <label for="amount">Price Range</label>
-                                <input type="text" id="amount" class="amount" value="$50 - $300">
-                                <div id="slider-range"></div>
-                                <a class="button" href="#">Search the Vehicle</a>
-                                <!-- <a class="link" href="#">ADVANCED SEARCH</a> -->
-                            </div>
+                        <div class="col-md-4">
+                            <span>Select Price Range (Rs.)</span>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                                <div class="selected-box">
+                                                    <select name="pricemin" class="selectpicker">
+                                                        <option value="0">0</option>
+                                                        <option value="100000">100,000</option>
+                                                        <option value="200000">200,000</option>
+                                                        <option value="400000">400,000</option>
+                                                        <option value="600000">600,000</option>
+                                                        <option value="800000">800,000</option>
+                                                        <option value="1000000">10,00,000</option>
+                                                        <option value="1200000">12,00,000</option>
+                                                        <option value="1400000">14,00,000</option>
+                                                        <option value="2000000">20,00,000</option>
+                                                        <option value="2500000">25,00,000</option>
+                                                    </select>
+                                                </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                                <div class="selected-box">
+                                                    <select name="pricemax" class="selectpicker">
+                                                        <option value="0">0</option>
+                                                        <option value="100000">100,000</option>
+                                                        <option value="200000">200,000</option>
+                                                        <option value="400000">400,000</option>
+                                                        <option value="600000">600,000</option>
+                                                        <option value="800000">800,000</option>
+                                                        <option value="1000000">10,00,000</option>
+                                                        <option value="1200000">12,00,000</option>
+                                                        <option value="1400000">14,00,000</option>
+                                                        <option value="2000000">20,00,000</option>
+                                                        <option value="2500000">25,00,000</option>
+                                                    </select>
+                                                </div>
+                                    </div>
+                                </div>
+                                <div class="row">  
+                                    <div class="col-md-12"> 
+                                    <button class="button red" name="submitsearch">Search the Vehicle</button>
+                                    </div>
+                                </div>
                         </div>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
     </section>
@@ -539,29 +557,32 @@ session_start();
          
                                 while($row=mysqli_fetch_assoc($result)){
                                 $count++;
+                                $id = $row['id'];
                                 $car_name = $row['car_name'];
                                 $car_price = $row['car_price'];
                                 $car_main_image = $row['main_image'];
                                 $car_condition = $row['car_condition'];
                                 $model = $row['model'];
+                                $engine = $row['engine'];
+                                $mileage = $row['mileage'];
 
                         ?>
                         <div class="item">
                             <div class="car-item-2 text-center">
                                 <div class="car-image">
-                                    <img class="img-fluid" src="<?php echo 'images/car/'.$car_main_image?>" alt="">
+                                    <img class="img-fluid" src="<?php echo 'images/car/'.$car_main_image?>" style='height: 264px; width: 370px' alt="">
                                     <div class="car-overlay-banner">
                                         
                                     </div>
                                 </div>
                                 <div class="car-content">
-                                    <a href="#"><?php echo  $car_name?></a>
+                                    <a href="details-01.php?carid=<?php echo  $id?>"><?php echo  $car_name?></a>
                                     <div class="car-list">
                                         <ul class="list-inline">
                                             <li> <?php echo  $model?> </li>
                                             <li> <?php echo  $car_condition?> </li>
-                                            <li> 3000 CC </li>
-                                            <li> 6,000 mi</li>
+                                            <li> <?php echo  $engine?> CC </li>
+                                            <li> <?php echo  $mileage?> km</li>
                                         </ul>
                                     </div>
                                     <!-- <div class="info">
@@ -569,7 +590,7 @@ session_start();
                                             with to ghost.</p>
                                     </div> -->
                                     <div class="price">
-                                        <span class="new-price"><?php echo  $car_price?></span>
+                                        <span class="new-price">Rs. <?php echo  number_format((int)$car_price)?> </span>
                                     </div>
                                 </div>
                             </div>

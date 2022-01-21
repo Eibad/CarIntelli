@@ -1,7 +1,84 @@
 <?php 
+if (isset($_POST['submitsearch'])){
+    // echo ($_POST['make']);
+    // echo ($_POST['condition']);
+    $model = ['2009','2010','2011','2019','2016','2017','2014','2022'];
+    $make = ['Toyota','Lexus','Acura','Suzuki','Honda'];
+    $condition = ['new','used'];
+    $transmission = ['automatic','manual'];
+    $priceto = "0";
+    $pricefrom = "0";
+    $body = ['Hatchback','SUV','Sedan','Crossover'];
+    $place = ['Islamabad','Karachi','Lahore'];
+    $where = " ";
+    if($_POST['condition'] != "all"){
+        $condition = [];
+        $condition[0] = $_POST['condition'];
+    }
+    if($_POST['transmission'] != "all"){
+        $transmission = [];
+        $transmission[0] = $_POST['transmission'];
+    }
+    if($_POST['body'] != "all"){
+        $body = [];
+        $body[0] = $_POST['body'];
+    }
+    if($_POST['make'] != "all"){
+        $make = [];
+        $make[0] = $_POST['make'];
+    }
+    if($_POST['model'] != "all"){
+        $model = [];
+        $model[0] = $_POST['model'];
+    }
+    if($_POST['pricemax'] || $_POST['pricemin']){
+        $max = "0";
+        $min = "0";
+        if($_POST['pricemax'] == "0"){
+            $max = $_POST['pricemin'];
+        }
+        if($_POST['pricemin'] == "0"){
+            $min = "0";
+            $max = "2500000" ;
+        }else{
+        $max = $_POST['pricemax'];
+        $mix = $_POST['pricemin'];
+        }
+        $where = "AND car_price BETWEEN '$min' AND '$max'";
+    }
 
 
+
+    
+    
+// print_r($condition);
+$model = "'" . implode ( "', '", $model ) . "'";
+$condition = "'" . implode ( "', '", $condition ) . "'";
+$make = "'" . implode ( "', '", $make ) . "'";
+$transmission = "'" . implode ( "', '", $transmission ) . "'";
+$body =  "'" . implode ( "', '", $body ) . "'";
+
+
+
+$con = mysqli_connect("localhost","root",'',"carintelli");
+
+// $query = "SELECT * FROM car_list WHERE car_status = '1' ORDER BY id DESC";
+
+$query = "SELECT * FROM car_list WHERE car_status = '1'
+             AND model IN (".$model.") 
+             AND car_condition IN (".$condition.")
+             AND car_make IN (".$make.")
+             AND transmission IN (".$transmission.")
+             AND body IN (".$body.")
+             ".$where." 
+             ORDER BY id DESC";
+$r = mysqli_query($con,$query);
+
+}
+
+else{
 include ('listing-01_showdata.php');
+}
 session_start();
 ?>
 
@@ -159,7 +236,10 @@ session_start();
                                     <?php
                                         if (isset($_SESSION['email'])){
                                     ?>
-                                    <li><a href="logout.php"> Logout </a>
+                                    <li><a style="color: red;" href="logout.php"><?php echo(($_SESSION['fname']))?> <i class="fa fa-angle-down fa-indicator"></i> </a>
+                                    <ul class="drop-down-multilevel right-menu">
+                                            <li><a href="logout.php">Logout</a></li>
+                                        </ul>
                                     </li>
                                     <?php
                                         }
@@ -235,15 +315,51 @@ product-listing  -->
                                                     </li>
                                                     <li><span class="checkbox">
                                                         <label>
+                                                            <input type="checkbox" name="year[]"value="2022"> 2022
+                                                            </label>
+                                                        </span>
+                                                    </li>
+                                                    <li><span class="checkbox">
+                                                        <label>
+                                                        <input type="checkbox" name="year[]"value="2019"> 2019
+                                                        </label>
+                                                    </span></li>
+                                                    <li><span class="checkbox">
+                                                        <label>
+                                                            <input type="checkbox" name="year[]"value="2017"> 2017
+                                                            </label>
+                                                        </span>
+                                                    </li>
+                                                    <li><span class="checkbox">
+                                                        <label>
+                                                            <input type="checkbox" name="year[]"value="2016"> 2016
+                                                            </label>
+                                                        </span>
+                                                    </li>
+                                                    <li><span class="checkbox">
+                                                        <label>
+                                                            <input type="checkbox" name="year[]"value="2014"> 2014
+                                                            </label>
+                                                        </span>
+                                                    </li>
+                                                    <li><span class="checkbox">
+                                                        <label>
                                                             <input type="checkbox" name="year[]"value="2011"> 2011
                                                             </label>
                                                         </span>
                                                     </li>
                                                     <li><span class="checkbox">
                                                         <label>
-                                                        <input type="checkbox" name="year[]"value="2009"> 2009
-                                                        </label>
-                                                    </span></li>
+                                                            <input type="checkbox" name="year[]"value="2010"> 2010
+                                                            </label>
+                                                        </span>
+                                                    </li>
+                                                    <li><span class="checkbox">
+                                                        <label>
+                                                            <input type="checkbox" name="year[]"value="2009"> 2009
+                                                            </label>
+                                                        </span>
+                                                    </li>
                                                     
                                                 </ul>
                                             </li>
@@ -252,7 +368,7 @@ product-listing  -->
                                                 <ul>
                                                     <li><span class="checkbox">
                                                         <label>
-                                                            <input type="checkbox"> All Conditions
+                                                            <input type="checkbox" name="condition[]"value="all"> All Conditions
                                                             </label>
                                                         </span></li>
                                                     <li><span class="checkbox">
@@ -273,35 +389,35 @@ product-listing  -->
                                                 <ul>
                                                     <li><span class="checkbox">
                                                             <label>
-                                                                <input type="checkbox"> All Body Styles
+                                                                <input type="checkbox" name="body[]"value="all"> All Body Styles
                                                             </label>
                                                         </span>
                                                     </li>
                                                     <li><span class="checkbox">
                                                             <label>
-                                                                <input type="checkbox"> Hatchback
+                                                                <input type="checkbox" name="body[]"value="Hatchback"> Hatchback
                                                             </label>
                                                         </span>
                                                     </li>
                                                     <li><span class="checkbox">
                                                             <label>
-                                                                <input type="checkbox"> Sedan
+                                                                <input type="checkbox" name="body[]"value="Sedan"> Sedan
                                                             </label>
                                                         </span>
                                                     </li>
                                                     <li><span class="checkbox">
                                                             <label>
-                                                                <input type="checkbox"> SUV
+                                                                <input type="checkbox" name="body[]"value="SUV"> SUV
                                                             </label>
                                                         </span>
                                                     </li>
                                                     <li><span class="checkbox">
                                                             <label>
-                                                                <input type="checkbox"> Crossover
+                                                                <input type="checkbox" name="body[]"value="Crossover"> Crossover
                                                             </label>
                                                         </span>
                                                     </li>
-                                                    <li><span class="checkbox">
+                                                    <!-- <li><span class="checkbox">
                                                             <label>
                                                                 <input type="checkbox"> Double Cabin
                                                             </label>
@@ -324,18 +440,48 @@ product-listing  -->
                                                                 <input type="checkbox"> Mini Van
                                                             </label>
                                                         </span>
-                                                    </li>
+                                                    </li> -->
                                                     
                                                 </ul>
                                             </li>
                                             <li class="list-group-item">
-                                                <a href="#">Model</a>
+                                                <a href="#">Make</a>
                                                 <ul>
                                                     <li><span class="checkbox">
                                                         <label>
-                                                            <input type="checkbox"> All Models
+                                                            <input type="checkbox" name="make[]"value="all"> All Make
                                                             </label>
                                                         </span></li>
+                                                        <li><span class="checkbox">
+                                                            <label>
+                                                                <input type="checkbox" name="make[]"value="Toyota"> Toyota
+                                                            </label>
+                                                        </span>
+                                                    </li>
+                                                    <li><span class="checkbox">
+                                                            <label>
+                                                                <input type="checkbox" name="make[]"value="Lexus"> Lexus
+                                                            </label>
+                                                        </span>
+                                                    </li>
+                                                    <li><span class="checkbox">
+                                                            <label>
+                                                                <input type="checkbox" name="make[]"value="Acura"> Acura
+                                                            </label>
+                                                        </span>
+                                                    </li>
+                                                    <li><span class="checkbox">
+                                                            <label>
+                                                                <input type="checkbox" name="make[]"value="Suzuki"> Suzuki
+                                                            </label>
+                                                        </span>
+                                                    </li>
+                                                    <li><span class="checkbox">
+                                                            <label>
+                                                                <input type="checkbox" name="make[]"value="Honda"> Honda
+                                                            </label>
+                                                        </span>
+                                                    </li>
                                                                     
                                                 </ul>
                                             </li>
@@ -344,17 +490,17 @@ product-listing  -->
                                                 <ul>
                                                     <li><span class="checkbox">
                                                         <label>
-                                                            <input type="checkbox"> All Transmissions
+                                                            <input type="checkbox" name="transmission[]"value="all"> All Transmissions
                                                             </label>
                                                         </span></li>
                                                     <li><span class="checkbox">
                                                             <label>
-                                                            <input type="checkbox"> Manual
+                                                            <input type="checkbox" name="transmission[]"value="automatic"> Manual
                                                             </label>
                                                         </span></li>
                                                     <li><span class="checkbox">
                                                             <label>
-                                                            <input type="checkbox"> Automatic
+                                                            <input type="checkbox" name="transmission[]"value="manual"> Automatic
                                                             </label>
                                                         </span></li>
                                                 </ul>
@@ -364,37 +510,43 @@ product-listing  -->
                                                 <ul>
                                                     <li><span class="checkbox">
                                                         <label>
-                                                            <input type="checkbox"> Any Color
+                                                            <input type="checkbox" name="color[]"value="all"> Any Color
                                                         </label>
                                                         </span>
                                                     </li>
                                                     <li><span class="checkbox">
                                                         <label>
-                                                            <input type="checkbox"> White
+                                                            <input type="checkbox" name="color[]"value="white"> White
                                                         </label>
                                                         </span>
                                                     </li>
                                                     <li><span class="checkbox">
                                                         <label>
-                                                            <input type="checkbox"> Black
+                                                            <input type="checkbox" name="color[]"value="Green"> Green
                                                         </label>
                                                         </span>
                                                     </li>
                                                     <li><span class="checkbox">
                                                         <label>
-                                                            <input type="checkbox"> Grey
+                                                            <input type="checkbox" name="color[]"value="Orange"> Orange
                                                         </label>
                                                         </span>
                                                     </li>
                                                     <li><span class="checkbox">
                                                         <label>
-                                                            <input type="checkbox"> Blue
+                                                            <input type="checkbox" name="color[]"value="Grey"> Grey
                                                         </label>
                                                         </span>
                                                     </li>
                                                     <li><span class="checkbox">
                                                         <label>
-                                                            <input type="checkbox"> Beige
+                                                            <input type="checkbox" name="color[]"value="Red"> Red
+                                                        </label>
+                                                        </span>
+                                                    </li>
+                                                    <li><span class="checkbox">
+                                                        <label>
+                                                            <input type="checkbox" name="color[]"value="Silver"> Silver
                                                         </label>
                                                         </span>
                                                     </li>
@@ -405,13 +557,25 @@ product-listing  -->
                                                 <ul>
                                                     <li><span class="checkbox">
                                                         <label>
-                                                            <input type="checkbox"> Local
+                                                            <input type="checkbox" name="place[]"value="all"> Any
                                                             </label>
                                                         </span>
                                                     </li>
                                                     <li><span class="checkbox">
                                                         <label>
-                                                            <input type="checkbox"> Imported
+                                                            <input type="checkbox" name="place[]"value="Islamabad"> Islamabad
+                                                            </label>
+                                                        </span>
+                                                    </li>
+                                                    <li><span class="checkbox">
+                                                        <label>
+                                                            <input type="checkbox" name="place[]"value="Lahore"> Lahore
+                                                            </label>
+                                                        </span>
+                                                    </li>
+                                                    <li><span class="checkbox">
+                                                        <label>
+                                                            <input type="checkbox" name="place[]"value="Karachi"> Karachi
                                                             </label>
                                                         </span>
                                                     </li>
@@ -433,38 +597,44 @@ product-listing  -->
                         <div class="sorting-options-main">
                         <div class="row">
                         <?php
-                                        if (isset($_SESSION['email'])){
+                                        if (! isset($_SESSION['email'])){
                                     ?>
                             
-                                <div class="col-lg-4">
-                                    <div class="price-slide">
-                                        <div class="price">
-                                            <!-- <label for="amount">Price Range</label> -->
-                                            <input type="text" id="amount" class="amount" value="$50 - $300">
-                                            <div id="slider-range"></div>
-                                        </div>
-                                    </div>
+                                <div class="col-lg-3">
+                                <div class="selected-box">
+                                                    <select name="pricemin" class="selectpicker">
+                                                        <option >Min Price</option>
+                                                        <option value="0">0</option>
+                                                        <option value="100000">100,000</option>
+                                                        <option value="200000">200,000</option>
+                                                        <option value="400000">400,000</option>
+                                                        <option value="600000">600,000</option>
+                                                        <option value="800000">800,000</option>
+                                                        <option value="1000000">10,00,000</option>
+                                                        <option value="1200000">12,00,000</option>
+                                                        <option value="1400000">14,00,000</option>
+                                                        <option value="2000000">20,00,000</option>
+                                                        <option value="2500000">25,00,000</option>
+                                                    </select>
+                                                </div>
                                 </div>
-                                <!-- <div class="col-lg-4">
-                                    <div class="price-slide-2">
-                                        <div class="price">
-                                            <label for="amount-2">Price Range</label>
-                                            <input type="text" id="amount-2" class="amount" value="$50 - $300">
-                                            <div id="slider-range-2"></div>
-                                        </div>
-                                    </div>
-                                </div> -->
-                                <div class="col-lg-4">
-                                    <div class="selected-box">
-                                            <select>
-                                            <option>Show  </option>
-                                            <option>1</option>
-                                            <option>2 </option>
-                                            <option>3 </option>
-                                            <option>4 </option>
-                                            <option>5 </option>
-                                            </select>
-                                    </div>
+                                <div class="col-lg-3">
+                                <div class="selected-box">
+                                                    <select name="pricemax" class="selectpicker">
+                                                      <option >Max Price</option>
+                                                        <option value="0">0</option>
+                                                        <option value="100000">100,000</option>
+                                                        <option value="200000">200,000</option>
+                                                        <option value="400000">400,000</option>
+                                                        <option value="600000">600,000</option>
+                                                        <option value="800000">800,000</option>
+                                                        <option value="1000000">10,00,000</option>
+                                                        <option value="1200000">12,00,000</option>
+                                                        <option value="1400000">14,00,000</option>
+                                                        <option value="2000000">20,00,000</option>
+                                                        <option value="2500000">25,00,000</option>
+                                                    </select>
+                                                </div>
                                         <!-- <div class="price-search">
                                             <span>Price search</span>
                                             <div class="search">
@@ -474,54 +644,23 @@ product-listing  -->
                                         </div> -->
                                 </div>
 
-                                <div class="col-lg-4 text-right">
+                                <div class="col-lg-3 text-right">
                                     <div class="selected-box">
-                                        <select>
+                                        <select name="order">
                                             <option>Sort by </option>
-                                            <option>Price: Lowest first</option>
-                                            <option>Price: Highest first </option>
-                                            <option>Product Name: A to Z </option>
-                                            <option>Product Name: Z to A </option>
-                                            <option>In stock</option>
+                                            <option value="lowest">Price: Lowest first</option>
+                                            <option value="highest">Price: Highest first </option>
                                             </select>
                                     </div>
+                                </div>
+                                <div class="col-lg-3 text-right">
+                                    <button class="button" name="go"> Go </button>
                                 </div>
                             </div>
                             <?php
                                         }
                             ?>
-                            <!-- <div class="row sorting-options"> -->
-                                <!-- <div class="col-lg-5">
-                                    <div class="change-view-button">
-                                        <a class="active" href="#"> <i class="fa fa-th"></i> </a>
-                                        <a href="listing-02.php"> <i class="fa fa-list-ul"></i> </a>
-                                    </div>
-                                </div> -->
-                                <!-- <div class="col-lg-3 text-right">
-                                    <div class="selected-box">
-                                        <select>
-                                        <option>Show  </option>
-                                        <option>1</option>
-                                        <option>2 </option>
-                                        <option>3 </option>
-                                        <option>4 </option>
-                                        <option>5 </option>
-                                        </select>
-                                    </div>
-                                </div> -->
-                                <!-- <div class="col-lg-4 text-right">
-                                    <div class="selected-box">
-                                        <select>
-                                            <option>Sort by </option>
-                                            <option>Price: Lowest first</option>
-                                            <option>Price: Highest first </option>
-                                            <option>Product Name: A to Z </option>
-                                            <option>Product Name: Z to A </option>
-                                            <option>In stock</option>
-                                            </select>
-                                    </div>
-                                </div> -->
-                            <!-- </div> -->
+                            
                         </div>
                         <div class="row">
                             <?php
@@ -530,7 +669,10 @@ product-listing  -->
                             $id = $row['id'];
                             $car_name = $row['car_name'];
                             $car_price = $row['car_price'];
-                            $car_main_image = $row['main_image']
+                            $car_main_image = $row['main_image'];
+                            $transmission = $row['transmission'];
+                            $model = $row['model'];
+                            $mileage = $row['mileage'];
                                     
                             ?>
                         
@@ -539,15 +681,15 @@ product-listing  -->
                                     
                                     <div class="car-item gray-bg text-center">
                                         <div class="car-image">
-                                            <img class="img-fluid" src="<?php echo 'images/car/'.$car_main_image?>" alt="">
+                                            <img class="img-fluid" src="<?php echo 'images/car/'.$car_main_image?>"  style='height: 187px; width: 263px' alt="">
                                             <div class="car-overlay-banner" href="#">
                                             </div>
                                         </div>
                                         <div class="car-list">
                                             <ul class="list-inline">
-                                                <li><i class="fa fa-registered"></i> 2016</li>
-                                                <li><i class="fa fa-cog"></i> Manual </li>
-                                                <li><i class="fa fa-shopping-cart"></i> 6,000 mi</li>
+                                                <li><i class="fa fa-registered"></i><?php echo  $model?></li>
+                                                <li><i class="fa fa-cog"></i><?php echo  $transmission?></li>
+                                                <li><i class="fa fa-tachometer"></i><?php echo  $mileage?> km</li>
                                             </ul>
                                         </div>
                                         <div class="car-content">
@@ -562,7 +704,7 @@ product-listing  -->
                                             <div class="separator"></div>
                                             <div class="price">
                                                 <!-- <span class="old-price">$35,568</span> -->
-                                                <span class="new-price"><?php echo  $car_price?> </span>
+                                                <span class="new-price">Rs. <?php echo  number_format((int)$car_price)?> </span>
                                             </div>
                                         </div>
                                     </div>

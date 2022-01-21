@@ -152,7 +152,10 @@
                                     <?php
                                         if (isset($_SESSION['email'])){
                                     ?>
-                                    <li><a href="logout.php"> Logout </a>
+                                    <li><a style="color: red;" href="logout.php"><?php echo(($_SESSION['fname']))?> <i class="fa fa-angle-down fa-indicator"></i> </a>
+                                    <ul class="drop-down-multilevel right-menu">
+                                            <li><a href="logout.php">Logout</a></li>
+                                        </ul>
                                     </li>
                                     <?php
                                         }
@@ -245,7 +248,7 @@
                             </div>
                             <div class="form-group">
                                 <label>Email *</label>
-                                <input class="form-control" type="text"  required placeholder="Enter your email" name="email">
+                                <input class="form-control" type="email"  required placeholder="Enter your email" name="email">
                             </div>
                             <div class="form-group">
                                 <label>Mobile phone *</label>
